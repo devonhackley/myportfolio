@@ -1,4 +1,5 @@
 @import "../../scss/_theme.scss";
+@import "../../scss/_base.scss";
 
 * {
   box-sizing: border-box;
@@ -35,37 +36,79 @@
   font-family: Avenir, Helvetica, sans-serif;
 }
 .landing-info h1 {
-  font-size: 5em; font-weight: 700; margin-top: 0; line-height: 1.2;
+  font-size: 5em;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-left: 5em;
+  line-height: 1.2;
 }
 .landing-info p {
-  font-size: 2em;
+  font-size: 1.7em;
+  margin-left: 76%;
+  margin-top: 0.5em;
 }
 .landing-info a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.4em;
   width:10%;
   height: 10%;
+  margin-left: 88%;
+  margin-top: 1.5em;
   padding: 0.4em;
   line-height: 1.2em;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
   transition: .6s background;
   border-bottom: none;
-  margin: 1rem auto;
+  // margin: 1rem auto;
   text-align: center;
   &:hover {
     color:$c-primary;
   }
 }
+
+#landing-social{
+  width: 100%;
+  margin-top: 60%;
+  display: inline-block;
+}
+
+.landing-social-links{
+}
 @media (min-aspect-ratio: 16/9) {
-  .video-foreground { height: 300%; top: -100%; }
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
 }
 @media (max-aspect-ratio: 16/9) {
-  .video-foreground { width: 300%; left: -100%; }
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+  .landing-content {
+    width: 300%;
+    margin-left: -100%;
+  }
 }
+// @media screen and (min-width: 400px){
+//   font-size: 3vw;
+// }
+//
+// @media screen and (min-width: 720px){
+//   font-size: 2vw;
+// }
+//
+// @media screen and (min-width: 1000px){
+//   font-size: 1.5vw;
+// }
+//
+// @media screen and (min-width: 1400px){
+//   font-size: 1vw;
+// }
 @media all and (max-width: 600px) {
-.landing-info { width: 50%; padding: .5rem; }
+.landing-info { width: 100%; padding: .5rem; }
 .landing-info h1 { margin-bottom: .2rem; }
 }
 @media all and (max-width: 500px) {
