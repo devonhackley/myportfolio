@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: [
     new ExtractText('bundle.css'),
-    new HTMLPlugin({template: `${__dirname}/app/idex.html`}),
+    new HTMLPlugin({template: `${__dirname}/app/index.html`}),
     new webpack.DefinePlugin({
       __API_URL__: JSON.stringify(process.env.API_URL),
     }),
@@ -28,13 +28,25 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
+
       {
         test: /\.scss$/,
-        loader: ExtractText.extract(['css-loader', 'sass-loader']),
+        loader: ExtractText.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
+        }),
       },
       {
         test: /\.html$/,
         loader: 'html-loader',
+      },
+      {
+        test: /\.(jpg|jpeg|bmp|tiff|gif|png)$/,
+        loader: 'url-loader?limit=10000&name=image/[hash].[ext]',
+      },
+      {
+        test: /\.(woff|ttf|svg|eot).*/,
+        loader: 'url-loader?limit=10000&name=font/[name].[ext]',
       },
     ],
   },
