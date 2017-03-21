@@ -70,12 +70,15 @@
 
 #landing-social{
   width: 100%;
-  margin-top: 60%;
-  display: inline-block;
+  margin-top: 65%;
+  margin-left: 20%;
 }
 
-.landing-social-links{
+.landing-social-links li {
+  display: inline-block;
+  padding: $s-pad *2;
 }
+
 @media (min-aspect-ratio: 16/9) {
   .video-foreground {
     height: 300%;
