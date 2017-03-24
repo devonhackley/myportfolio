@@ -21,18 +21,27 @@ angular.module('portfolio', [uiRouter])
       template: '<about></about>',
     },
     {
+      name: 'dashboard',
+      url:'/dashboard',
+      template: '<dashboard></dashboard>',
+    },
+    {
       name: 'projects',
       url: '/projects',
       template: '<projects></projects>',
     },
     {
-      name: 'resume',
-      url: '/resume',
-      template: '<resume></resume>',
+      name: 'contact',
+      url: '/contact',
+      template: '<contact></contact>',
     },
   ];
   routes.forEach(route => $stateProvider.state(route));
 }]);
 
 require('./container/landing');
-require('./container/about');
+require('./container/dashboard');
+
+require('./component/about');
+require('./component/site-nav');
+require('./component/side-panel');

@@ -9,7 +9,7 @@ require('angular').module('portfolio')
     this.$onInit = () => {
       this.enterHandleSubmit = () => {
         $log.log('we are leaving the landing page');
-        $location.path('/about');
+        $location.path('/dashboard');
       };
     };
   }],
