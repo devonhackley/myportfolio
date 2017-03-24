@@ -35,3 +35,4 @@ angular.module('portfolio', [uiRouter])
 }]);
 
 require('./container/landing');
+require('./container/about');
