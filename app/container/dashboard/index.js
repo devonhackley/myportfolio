@@ -3,5 +3,5 @@
 require('./_dashboard.scss');
 require('angular').module('portfolio')
 .component('dashboard', {
-  template: require('dashboard.html'),
+  template: require('./dashboard.html'),
 });
