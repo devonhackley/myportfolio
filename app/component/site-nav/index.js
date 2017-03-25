@@ -2,6 +2,6 @@
 
 require('./_site-nav.scss');
 require('angular').module('portfolio')
-.component('site-nav', {
+.component('siteNav', {
   template: require('./site-nav.html'),
 });
