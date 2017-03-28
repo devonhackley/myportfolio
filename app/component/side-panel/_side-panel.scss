@@ -3,5 +3,13 @@
 .side-panel {
   background: $c-greydark;
   width: 30%;
-  height:100%;
+  height:775px;
+
+  h2 {
+    font-size: 2em;
+    padding: $s-pad;
+    margin: 0 auto;
+    margin-left: 1.5em;
+  }
+  
 }
